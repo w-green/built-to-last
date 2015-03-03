@@ -1,0 +1,19 @@
+{
+  "name": "built-to-last",
+  "version": "0.1.0",
+  "authors": [
+    "Warren <w.green@hotmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
