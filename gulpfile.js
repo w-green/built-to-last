@@ -8,8 +8,9 @@ var gulp = require('./gulp')([
   'reload',
   'file-include',
   'build-html',
-  'build-scripts'
+  'build-scripts',
+  'build-css'
 ]);
 
-gulp.task('build', ['sass', 'jshint', 'browserify', 'file-include', 'build-scripts', 'build-html', 'server-dist']);
-gulp.task('default', ['file-include', 'browserify', 'server', 'watch']);
+gulp.task('build', ['sass', 'jshint', 'browserify', 'file-include', 'build-scripts', 'build-html', 'build-css', 'server-dist']);
+gulp.task('default', ['file-include', 'sass', 'jshint', 'browserify', 'server', 'watch']);

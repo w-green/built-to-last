@@ -1,0 +1,30 @@
+/* Makes border-box properties */
+@include border-box-sizing;
+
+body {
+  @include container;
+  @include show-grid(overlay);
+}
+
+.wrap {
+  @include container;
+}
+
+/* Tells Susy there's 8 columns in the content */
+.content {
+  @include span(10 of 12);
+  clear:both;
+  // @include span(isolate 3 at 5);
+  // @include bp-max($screen-md-max) {
+  //   @include span(2 of 12 at 3);
+  // }
+}
+
+footer {
+  @include span(12 of 12);
+}
+
+/* Tells Susy there's 4 columns in the sidebar, and its the last item on the row. */
+.sidebar {
+  @include span(4 last);
+}
