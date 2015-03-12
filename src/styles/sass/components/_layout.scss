@@ -34,15 +34,15 @@
 }
 
 .divider-two__line {
-  border-top: 5px solid yellow;
+  border-top: 5px solid $yellowy-green;
 }
 
 .divider-three__line {
-  border-top: 5px solid brown;
+  border-top: 5px solid $blue-pale;
 }
 
 .divider-four__line {
-  border-top: 5px solid green;
+  border-top: 5px solid $grey-green;
 }
 
 .divider__circle {
@@ -63,15 +63,15 @@
 }
 
 .divider-two__circle {
-  background-color: yellow;
+  background-color: $yellowy-green;
 }
 
 .divider-three__circle {
-  background-color: brown;
+  background-color: $blue-pale;
 }
 
 .divider-four__circle {
-  background-color: green;
+  background-color: $grey-green;
 }
 
 

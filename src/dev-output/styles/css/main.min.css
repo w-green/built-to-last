@@ -1966,13 +1966,13 @@ td, th {
   margin-right: auto; }
 
 .divider-two__line {
-  border-top: 5px solid yellow; }
+  border-top: 5px solid #B1E001; }
 
 .divider-three__line {
-  border-top: 5px solid brown; }
+  border-top: 5px solid #B8ECD7; }
 
 .divider-four__line {
-  border-top: 5px solid green; }
+  border-top: 5px solid #476C5E; }
 
 .divider__circle {
   position: absolute;
@@ -1994,13 +1994,13 @@ td, th {
             animation-delay: 0.5s; }
 
 .divider-two__circle {
-  background-color: yellow; }
+  background-color: #B1E001; }
 
 .divider-three__circle {
-  background-color: brown; }
+  background-color: #B8ECD7; }
 
 .divider-four__circle {
-  background-color: green; }
+  background-color: #476C5E; }
 
 .divider article {
   margin-top: 40px; }
@@ -2101,8 +2101,9 @@ footer {
 
 @media (min-width: 768px) {
   .nav-container.is-active {
-    height: 50px;
-    background-color: #3A1E10; } }
+    height: 40px;
+    background-color: rgba(71, 108, 94, 0.9);
+    box-shadow: 0 4px 21px #000; } }
 
 .menu-side {
   position: fixed;
@@ -2114,10 +2115,10 @@ footer {
     .menu-side {
       width: 150px;
       left: -200px;
-      background-color: #3A1E10; } }
+      background-color: #083643; } }
   @media (min-width: 768px) {
     .menu-side {
-      height: 50px;
+      height: 40px;
       z-index: 1;
       right: 0; } }
   .menu-side ul {
@@ -2137,7 +2138,7 @@ footer {
     clear: both; }
   @media (min-width: 768px) {
     .menu-item {
-      margin: 5px 0;
+      margin: 0;
       width: 130px;
       display: inline-block; } }
   .menu-item .menu-item__symbol {

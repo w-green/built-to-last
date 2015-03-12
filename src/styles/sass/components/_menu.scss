@@ -22,8 +22,9 @@
 .nav-container.is-active{
 
   @include bp-min($screen-sm-min) {
-    height: 50px;
-    background-color: $brown-dark;
+    height: 40px;
+    background-color: rgba($grey-green, 0.9);
+    box-shadow: 0 4px 21px #000;
   }
 
 }
@@ -39,11 +40,11 @@
   @include bp-max($screen-sm-max) {
     width: 150px;
     left: -200px;
-    background-color: $brown-dark;
+    background-color: $blue-sea;
   }
 
   @include bp-min($screen-sm-min) {
-    height: 50px;
+    height: 40px;
     z-index: 1;
     right: 0;
   }
@@ -66,7 +67,7 @@
   @include clearfix;
 
   @include bp-min($screen-sm-min) {
-    margin: 5px 0;
+    margin: 0;
     width: 130px;
     display: inline-block;
   }
