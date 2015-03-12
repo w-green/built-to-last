@@ -5,4 +5,7 @@ module.exports = function() {
   gulp.src('src/dev-output/styles/css/main.min.css')
     .pipe(minifycss())
     .pipe(gulp.dest('dist/styles/css/'));
+
+  gulp.src('src/dev-output/styles/fonts/**')
+    .pipe(gulp.dest('dist/styles/fonts'));
 };

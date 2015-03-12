@@ -4,13 +4,31 @@ var $ = require('jquery');
 
 $(function(){
 
-  var myModule = require('./modules/mymodule');
-  var localModule = new myModule();
-  localModule.init();
+  // var myModule = require('./modules/mymodule');
+  var Nav = require('./modules/nav');
+  var layout = require('./modules/layout');
+  var DividerCirclesPulse = require('./modules/divider-circles-pulse');
+
+  // var localModule = new myModule();
+  // localModule.init();
+
+  var navEl = $('#main-nav-container-js');
+  var navModule = new Nav(navEl);
+  navModule.init();
+
+  var dividers = $('.divider-one');
+  layout(dividers).init();
+
+  var dividersCircles = $('.divider__circle');
+  $.each(dividersCircles, function(index, circle) {
+    var module = new DividerCirclesPulse(circle);
+    module.init();
+  });
+
 
 });
 
-},{"./modules/mymodule":3,"jquery":2}],2:[function(require,module,exports){
+},{"./modules/divider-circles-pulse":3,"./modules/layout":4,"./modules/nav":5,"jquery":2}],2:[function(require,module,exports){
 (function (global){
 ;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*! jQuery v2.1.3 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
@@ -24,10 +42,66 @@ $(function(){
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],3:[function(require,module,exports){
-module.exports = function myModule(){
+module.exports = function DividerCirclesPulse(dividerCircles) {
 
-  this.init = function initFn(){
-    console.log('loaded');
+  var jqCircle = $(dividerCircles);
+
+  var jqCircleScrollPos = jqCircle.offset().top;
+
+  function addClassOnScroll() {
+    if(window.scrollY > jqCircleScrollPos - 100) {
+     jqCircle.addClass('active');
+
+     // Remove listener after it is actioned once
+    $(window).off('scroll', addClassOnScroll);
+
+    }
+  }
+
+
+  this.init = function initFn() {
+    $(window).scroll(addClassOnScroll);
+  };
+
+};
+},{}],4:[function(require,module,exports){
+module.exports = function layout(subSections) {
+
+  return {
+    init : function initFn() {
+      subSections.height(window.innerHeight + 'px');
+    }
+
+  };
+
+};
+},{}],5:[function(require,module,exports){
+module.exports = function Nav(navEl) {
+
+  var className = 'is-active';
+  var firstDividerHeight = window.innerHeight < 400 ? window.innerHeight : 400;
+
+  function onScrollAddClass() {
+    if(window.scrollY > firstDividerHeight) {
+      navEl.addClass(className);
+
+      $(window).off('scroll', onScrollAddClass);
+      $(window).scroll(onScrollRemoveClass);
+    }
+  }
+
+  function onScrollRemoveClass() {
+    if(window.scrollY < firstDividerHeight) {
+      navEl.removeClass(className);
+
+      $(window).off('scroll', onScrollRemoveClass);
+      $(window).scroll(onScrollAddClass);
+    }
+  }
+
+
+  this.init = function initFn() {
+    $(window).scroll(onScrollAddClass);
   };
 
 };

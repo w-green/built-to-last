@@ -1,0 +1,12 @@
+// https://web-design-weekly.com/snippets/sass-clearfix-mixin/
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}

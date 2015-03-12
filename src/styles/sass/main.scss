@@ -1,11 +1,28 @@
 // ----- dependencies ----- //
 @import 'lib/susy';
+@import 'lib/unitize';
 
 // ----- resets ----- //
 @import 'normalize';
+
+
+// ----- Font awesome version 4.2.0----- //
+@import 'lib/font-awesome/scss/font-awesome.scss';
+
+// ----- variables ----- //
+@import 'variables/colors';
+
+
+// ----- mixins ----- //
+@import 'mixins/clearfix';
+@import 'mixins/circle';
 
 // ----- modules ----- //
 @import 'modules/grid/grid';
 
 // ----- components ----- //
+@import 'components/theme';
 @import 'components/layout';
+@import 'components/menu-side';
+
+

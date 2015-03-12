@@ -1,23 +1,159 @@
 /* Makes border-box properties */
 @include border-box-sizing;
 
-body {
-  @include container;
-  @include show-grid(overlay);
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
-.wrap {
-  @include container;
+
+.divider {
+  position: relative;
+  margin-bottom: 50px;
+
+  @include clearfix();
+
+  &:first-of-type {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include bp-min($screen-sm-min) {
+      max-height: 400px !important;
+    }
+
+  }
+}
+
+.divider__line {
+  max-width: 500px;
+  height: 5px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divider-two__line {
+  border-top: 5px solid yellow;
+}
+
+.divider-three__line {
+  border-top: 5px solid brown;
+}
+
+.divider-four__line {
+  border-top: 5px solid green;
+}
+
+.divider__circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  margin-top: -52px;
+  margin-left: -50px;
+
+  @include circle;
+
+  &.active {
+    animation: 1s pulse;
+    animation-delay: 0.5s;
+  }
+
+}
+
+.divider-two__circle {
+  background-color: yellow;
+}
+
+.divider-three__circle {
+  background-color: brown;
+}
+
+.divider-four__circle {
+  background-color: green;
+}
+
+
+.divider article {
+  margin-top: 40px;
+}
+
+.divider-one {
+  border-top: 5px solid #999fa1;
+}
+
+.divider article {
+
+  @include span(10 of 12);
+  @include push(1);
+
+  @include bp-min($screen-md-min) {
+    @include span(8 of 12);
+    @include push(2);
+  }
+
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+.box {
+  @include span(6 of 12);
+  width: 100%;
+  height: 100px;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+
+  color: #FFF;
+  text-align: center;
+
+}
+
+.companyName--centered {
+  // text-transform: uppercase;
+  font-size: 4em;
+  line-height: 100px;
+
+}
+
+.companySlogan {
+
+}
+
+.container {
+  @include container(100%);
+
+  @include bp-min($screen-sm-min) {
+    // @include container;
+  }
+
+  @include bp-min($screen-md-min) {
+    // @include container(100%);
+    // padding-left:200px;
+  }
+
+  @include bp-min($screen-lg-min) {
+    // @include container(100%);
+    // @include show-grid(12);
+  }
+
 }
 
 /* Tells Susy there's 8 columns in the content */
 .content {
-  @include span(10 of 12);
+  @include span(12 of 12);
+  @include gutters();
   clear:both;
-  // @include span(isolate 3 at 5);
-  // @include bp-max($screen-md-max) {
-  //   @include span(2 of 12 at 3);
-  // }
 }
 
 footer {
@@ -27,4 +163,12 @@ footer {
 /* Tells Susy there's 4 columns in the sidebar, and its the last item on the row. */
 .sidebar {
   @include span(4 last);
+}
+
+
+
+.about-image {
+  float: left;
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
