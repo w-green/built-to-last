@@ -23,8 +23,9 @@
 
   @include bp-min($screen-sm-min) {
     height: 40px;
-    background-color: rgba($grey-green, 0.9);
-    box-shadow: 0 4px 21px #000;
+    // background-color: rgba($grey-green, 0.9);
+    background-color: $grey-green;
+    box-shadow: 0 4px 10px #000;
   }
 
 }

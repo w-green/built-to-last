@@ -1908,6 +1908,94 @@ td, th {
 .fa-meanpath:before {
   content: "\f20c"; }
 
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; }
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s; }
+
+.animated.delay1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3); }
+
+  50% {
+    opacity: 1; } }
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3); }
+
+  50% {
+    opacity: 1; } }
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn; }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp; }
+
+@-webkit-keyframes grow {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3); }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3); }
+
+  100% {
+    opacity: 1; } }
+
+.grow {
+  -webkit-animation-name: grow;
+          animation-name: grow; }
+
 /* Changing Susy default global settings */
 .divider-one {
   background: url('/images/backgrounds/extension-2.jpg') no-repeat 50% 50%;
@@ -2039,8 +2127,7 @@ td, th {
   text-align: center; }
 
 .companyName--centered {
-  font-size: 4em;
-  line-height: 100px; }
+  font-size: 4em; }
 
 .container {
   max-width: 100%;
@@ -2102,8 +2189,8 @@ footer {
 @media (min-width: 768px) {
   .nav-container.is-active {
     height: 40px;
-    background-color: rgba(71, 108, 94, 0.9);
-    box-shadow: 0 4px 21px #000; } }
+    background-color: #476C5E;
+    box-shadow: 0 4px 10px #000; } }
 
 .menu-side {
   position: fixed;

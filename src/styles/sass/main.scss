@@ -12,6 +12,11 @@
 // ----- variables ----- //
 @import 'variables/colors';
 
+// ----- animations ----- //
+@import 'animations/animated';
+@import 'animations/zoomin';
+@import 'animations/fadeinup';
+@import 'animations/grow';
 
 // ----- mixins ----- //
 @import 'mixins/clearfix';
