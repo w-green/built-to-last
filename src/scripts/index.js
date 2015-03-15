@@ -7,9 +7,23 @@ $(function(){
   var Nav = require('./modules/nav');
   var layout = require('./modules/layout');
   var DividerCirclesPulse = require('./modules/divider-circles-pulse');
+  var slider = require('./modules/slider/model.js');
+
 
   // var localModule = new myModule();
   // localModule.init();
+
+
+  slider();
+
+
+  $('.carousel-slider').slick({
+    // slidesToShow : 1
+    // variableWidth : true,
+    dots : true,
+    speed: 300
+  });
+
 
   var navEl = $('#main-nav-container-js');
   var navModule = new Nav(navEl);

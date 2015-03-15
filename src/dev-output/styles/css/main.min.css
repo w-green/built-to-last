@@ -1997,6 +1997,15 @@ td, th {
           animation-name: grow; }
 
 /* Changing Susy default global settings */
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+h1 {
+  font-family: 'Lato', sans-serif; }
+
+.animation-expand-text {
+  font-size: 1em; }
+
 .divider-one {
   background: url('/images/backgrounds/extension-2.jpg') no-repeat 50% 50%;
   background-size: cover; }
@@ -2033,7 +2042,8 @@ td, th {
 
 .divider {
   position: relative;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-top: 50px; }
   .divider:before, .divider:after {
     content: "";
     display: table; }
@@ -2046,6 +2056,12 @@ td, th {
       .divider:first-of-type {
         max-height: 400px !important; } }
 
+.divider:nth-of-type(2) {
+  margin-top: 0; }
+
+.divider-inner-container {
+  margin-top: 80px; }
+
 .divider__line {
   max-width: 500px;
   height: 5px;
@@ -2057,10 +2073,10 @@ td, th {
   border-top: 5px solid #B1E001; }
 
 .divider-three__line {
-  border-top: 5px solid #B8ECD7; }
+  border-top: 5px solid black; }
 
 .divider-four__line {
-  border-top: 5px solid #476C5E; }
+  border-top: 5px solid #23362F; }
 
 .divider__circle {
   position: absolute;
@@ -2085,13 +2101,10 @@ td, th {
   background-color: #B1E001; }
 
 .divider-three__circle {
-  background-color: #B8ECD7; }
+  background-color: black; }
 
 .divider-four__circle {
-  background-color: #476C5E; }
-
-.divider article {
-  margin-top: 40px; }
+  background-color: #23362F; }
 
 .divider-one {
   border-top: 5px solid #999fa1; }
@@ -2127,9 +2140,15 @@ td, th {
   text-align: center; }
 
 .companyName--centered {
-  font-size: 4em; }
+  font-size: 3.6em;
+  text-transform: uppercase;
+  display: inline-block;
+  border: 3px solid #FFF;
+  padding: 10px;
+  margin: 0; }
 
 .container {
+  margin-bottom: 100px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
@@ -2164,6 +2183,9 @@ footer {
   padding-right: 1em;
   padding-bottom: 1em; }
 
+.contact-details {
+  text-align: center; }
+
 @-webkit-keyframes reveal {
   from {
     width: 0px; }
@@ -2189,7 +2211,7 @@ footer {
 @media (min-width: 768px) {
   .nav-container.is-active {
     height: 40px;
-    background-color: #476C5E;
+    background-color: #23362F;
     box-shadow: 0 4px 10px #000; } }
 
 .menu-side {
@@ -2258,3 +2280,21 @@ footer {
     text-align: center; }
   .menu-side__info .menu-side__info_list {
     text-align: left; }
+
+.carousel-slider {
+  width: 90%;
+  max-width: 800px;
+  max-height: 600px;
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.carousel-slider .slick-slide img {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 500px; }
+
+.slick-prev, .slick-next {
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 25px; }

@@ -3,6 +3,13 @@
 <head>
   <title></title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick-theme.css"/>
+
   <link rel="stylesheet" type="text/css" href="styles/css/main.min.css">
 </head>
 <body>
@@ -57,7 +64,9 @@
     
 
       <div class="box">
-        <span class="companyName--centered animated zoomIn">Built To Last</span>
+        <h1 class="companyName--centered animated zoomIn">
+        Built to Last
+        </h1>
         <div class="companySlogan animated delay1 fadeInUp">
           <p>Offering expert carpentry and construction expertise for projects large and small.</p>
         </div>
@@ -75,25 +84,28 @@
       <span>About</span>
     </div>
 
-    <article>
-    <img class="about-image" src="/images/chris-1.png" />
+    <div class="divider-inner-container">
+      <article>
+      <img class="about-image" src="/images/chris-1.png" />
 
-      <div>
-        <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p>
-        <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p>
-        <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p>
-        <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p>
-        <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p>
-      </div>
-      <div>
-        <h2>Type of work</h2>
-        <ul>
-          <li>Loft conversions</li>
-          <li>Window reconstruction</li>
-          <li>Carpentry</li>
-        </ul>
-      </div>
-    </article>
+        <div>
+          <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p>
+          <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p>
+          <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p><!--
+          <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p>
+          <p>loren ipsum loquitor loren ipsum loquitorloren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor loren ipsum loquitor</p> -->
+        </div>
+        <div>
+          <h2>Type of work</h2>
+          <ul>
+            <li>Loft conversions</li>
+            <li>Extenstions</li>
+            <li>Window reconstruction</li>
+            <li>Carpentry</li>
+          </ul>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section class="divider divider-three">
@@ -104,13 +116,16 @@
       <span>Projects</span>
     </div>
 
-    <article>
+    <div class="divider-inner-container">
+      <div data-behaviour="carousel-slider" class="carousel-slider">
+
+      </div>
+    </div>
 
 
-    </article>
   </section>
 
-  <section class="divider divider-three">
+  <section class="divider divider-four">
 
     <div class="divider__line divider-four__line"></div>
     <div class="divider__circle divider-four__circle">
@@ -118,16 +133,23 @@
       <span>Contact</span>
     </div>
 
-    <article>
+    <div class="divider-inner-container">
+      <article>
+        <div class="contact-details">
+          <span class="fa fa-lg fa-fw fa-phone"></span><span>Phone: 00000000000</span>
+          <span class="fa fa-lg fa-fw fa-envelope"></span><span>Email: chris@builttolast.com</span>
+        </div>
 
-
-    </article>
+      </article>
+    </div>
   </section>
 
     
   </div>
 
-<script src="scripts/index.js"></script>
+
+  <script src="scripts/index.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
 
 </body>
 </html>

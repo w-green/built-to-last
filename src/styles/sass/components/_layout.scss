@@ -1,3 +1,6 @@
+$divider-three--base-color: black;
+
+
 /* Makes border-box properties */
 @include border-box-sizing;
 
@@ -11,6 +14,7 @@
 .divider {
   position: relative;
   margin-bottom: 50px;
+  margin-top: 50px;
 
   @include clearfix();
 
@@ -24,6 +28,18 @@
 
   }
 }
+
+.divider:nth-of-type(2) {
+  margin-top: 0;
+}
+
+.divider-inner-container {
+  margin-top: 80px;
+}
+
+// .divider-three {
+//   background-color: lightblue;
+// }
 
 .divider__line {
   max-width: 500px;
@@ -39,7 +55,7 @@
 }
 
 .divider-three__line {
-  border-top: 5px solid $blue-pale;
+  border-top: 5px solid $divider-three--base-color;
 }
 
 .divider-four__line {
@@ -68,7 +84,7 @@
 }
 
 .divider-three__circle {
-  background-color: $blue-pale;
+  background-color: $divider-three--base-color;
 }
 
 .divider-four__circle {
@@ -76,9 +92,9 @@
 }
 
 
-.divider article {
-  margin-top: 40px;
-}
+// .divider article {
+//   margin-top: 40px;
+// }
 
 .divider-one {
   border-top: 5px solid #999fa1;
@@ -113,6 +129,7 @@
 
   position: absolute;
   top: 50%;
+  // margin-top: -50px;
   margin-top: -50px;
 
   color: #FFF;
@@ -121,17 +138,27 @@
 }
 
 .companyName--centered {
-  // text-transform: uppercase;
-  font-size: 4em;
-  // line-height: 100px;
-
+  font-size: 3.6em;
+  text-transform: uppercase;
+  display: inline-block;
+  border: 3px solid #FFF;
+  padding: 10px;
+  margin: 0;
 }
+
+// .companyName--centered {
+//   // text-transform: uppercase;
+//   font-size: 4em;
+//   // line-height: 100px;
+
+// }
 
 .companySlogan {
 
 }
 
 .container {
+  margin-bottom: 100px;
   @include container(100%);
 
   @include bp-min($screen-sm-min) {
@@ -172,4 +199,9 @@ footer {
   float: left;
   padding-right: 1em;
   padding-bottom: 1em;
+}
+
+
+.contact-details {
+  text-align: center;
 }
