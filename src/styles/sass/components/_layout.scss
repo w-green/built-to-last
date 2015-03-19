@@ -100,7 +100,7 @@ $divider-three--base-color: black;
   border-top: 5px solid #999fa1;
 }
 
-.divider article {
+.divider-inner-container{
 
   @include span(10 of 12);
   @include push(1);
@@ -193,6 +193,11 @@ footer {
   @include span(4 last);
 }
 
+
+
+.project-copy {
+  // margin-left: @include span(1 or 12);
+}
 
 
 .about-image {

@@ -2109,13 +2109,13 @@ h1 {
 .divider-one {
   border-top: 5px solid #999fa1; }
 
-.divider article {
+.divider-inner-container {
   width: 83.05085%;
   float: left;
   margin-right: 1.69492%;
   margin-left: 8.47458%; }
   @media (min-width: 992px) {
-    .divider article {
+    .divider-inner-container {
       width: 66.10169%;
       float: left;
       margin-right: 1.69492%;
