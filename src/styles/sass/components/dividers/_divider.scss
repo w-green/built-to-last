@@ -1,0 +1,23 @@
+.divider {
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+  @include clearfix();
+
+  &:first-of-type {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include bp-min($screen-sm-min) {
+      max-height: 400px !important;
+    }
+
+  }
+}
+
+// modified dividers
+@import 'mods/divider-one';
+@import 'mods/divider-two';
+@import 'mods/divider-three';
+@import 'mods/divider-four';

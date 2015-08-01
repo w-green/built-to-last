@@ -9,6 +9,14 @@ body {
 
 h1 {
   font-family: 'Lato', sans-serif;
+
+}
+
+@include bp-min($screen-md-min) {
+    h1 {
+      letter-spacing: 5px;
+      word-spacing: 10px;
+    }
 }
 
 @mixin bounce {

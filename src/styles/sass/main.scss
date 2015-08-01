@@ -20,6 +20,7 @@
 
 // ----- mixins ----- //
 @import 'mixins/clearfix';
+@import 'mixins/square-rotated-45';
 @import 'mixins/circle';
 
 // ----- modules ----- //
@@ -31,5 +32,6 @@
 @import 'components/layout';
 @import 'components/menu';
 @import 'components/slider';
+@import 'components/dividers/divider';
 
 

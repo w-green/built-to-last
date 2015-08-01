@@ -40,25 +40,25 @@
 //   color: #FFF;
 // }
 
+.nav--is-open {
+  .main-nav {
+    @include bp-max($screen-sm-max) {
+      left: 0;
+    }
+  }
+}
 
-.menu-side {
+.main-nav {
   position: fixed;
   height: 100%;
-  color: #FFF;
+  color: burlywood;
   z-index: 1;
   top: 0;
 
-
-  @include bp-max($screen-sm-max) {
-    width: 150px;
-    left: -200px;
-    background-color: $blue-sea;
-  }
-
   @include bp-min($screen-sm-min) {
     height: 40px;
-    z-index: 1;
-    right: 0;
+    position: static;
+    text-align: right;
   }
 
   ul {
@@ -106,6 +106,11 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  @include bp-min($screen-sm-min) {
+    width: 130px;
+  }
+
 }
 
 .menu-item--about {
@@ -123,7 +128,7 @@
   // background-color: green;
 }
 
-.menu-side a {
+.main-nav a {
   color: #FFF;
   text-decoration: none;
 
@@ -150,3 +155,11 @@
   }
 }
 
+.icon-menu {
+  @extend .fa;
+  @extend .fa-lg;
+  @extend .fa-fw;
+  @extend .fa-bars;
+  background-color: white;
+  padding: 4px;
+}

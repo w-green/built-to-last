@@ -1,7 +1,8 @@
 bower_components
 node_modules
-src/images/projects
-src/dev-output/images/projects
+src/images
+src/dev-output/images
+src/data
 .sass-cache
 dist
 .tmp

@@ -1,7 +1,7 @@
 @mixin circle($diameter: 100px) {
   width: $diameter;
   height: $diameter;
-  border-radius: $diameter / 2;
+  // border-radius: $diameter / 2;
   text-align: center;
   line-height: $diameter;
   text-transform: uppercase;

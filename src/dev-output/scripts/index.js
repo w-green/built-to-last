@@ -4,18 +4,10 @@ var $ = require('jquery');
 
 $(function(){
 
-  // var myModule = require('./modules/mymodule');
+  var Menu = require('./modules/menu');
   var Nav = require('./modules/nav');
   var layout = require('./modules/layout');
   var DividerCirclesPulse = require('./modules/divider-circles-pulse');
-  var slider = require('./modules/slider/model.js');
-
-
-  // var localModule = new myModule();
-  // localModule.init();
-
-
-  slider();
 
 
   $('.carousel-slider').slick({
@@ -26,9 +18,14 @@ $(function(){
   });
 
 
-  var navEl = $('#main-nav-container-js');
-  var navModule = new Nav(navEl);
-  navModule.init();
+  var menuEl = $('#js-menu-icon');
+  var menuModule = new Menu(menuEl);
+  menuModule.init();
+
+
+  // var navEl = $('#main-nav-container-js');
+  // var navModule = new Nav(navEl);
+  // navModule.init();
 
   var dividers = $('.divider-one');
   layout(dividers).init();
@@ -42,7 +39,7 @@ $(function(){
 
 });
 
-},{"./modules/divider-circles-pulse":3,"./modules/layout":4,"./modules/nav":5,"./modules/slider/model.js":6,"jquery":2}],2:[function(require,module,exports){
+},{"./modules/divider-circles-pulse":3,"./modules/layout":4,"./modules/menu":5,"./modules/nav":6,"jquery":2}],2:[function(require,module,exports){
 (function (global){
 ;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*! jQuery v2.1.3 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
@@ -90,6 +87,22 @@ module.exports = function layout(subSections) {
 
 };
 },{}],5:[function(require,module,exports){
+module.exports = function Menu(menuEl) {
+
+  var $body = $('body');
+
+  this.init = function initFn() {
+
+    console.log(menuEl);
+
+    menuEl.on('click', function() {
+      $body.addClass('nav--is-open');
+    });
+
+  };
+
+};
+},{}],6:[function(require,module,exports){
 module.exports = function Nav(navEl) {
 
   var className = 'is-active';
@@ -117,47 +130,6 @@ module.exports = function Nav(navEl) {
   this.init = function initFn() {
     $(window).scroll(onScrollAddClass);
   };
-
-};
-},{}],6:[function(require,module,exports){
-module.exports = function sliderModel() {
-
-  var dir = "/images/projects";
-  var fileextension = ".jpg";
-
-  // var numImages = 34;
-  var numImages = 2;
-
-  var domNode = document.querySelector('[data-behaviour="carousel-slider"]');
-
-  var docFrag = document.createDocumentFragment();
-
-
-  for(var i = 1; i <= numImages; i += 1) {
-
-    var sliderItemContainer = document.createElement('div');
-    var img = document.createElement('img');
-    img.setAttribute('src', '/images/projects/project-image-' + i + '.jpg');
-
-    sliderItemContainer.appendChild(img);
-    docFrag.appendChild(sliderItemContainer);
-  }
-
-
-  // for(var i = 1; i <= numImages; i += 1) {
-
-  //   var sliderItemContainer = document.createElement('div');
-  //   var img = document.createElement('img');
-  //   img.setAttribute('src', '/images/projects/project-image-' + i + '.jpg');
-
-  //   sliderItemContainer.appendChild(img);
-  //   docFrag.appendChild(sliderItemContainer);
-  // }
-
-
-  domNode.appendChild(docFrag);
-
-
 
 };
 },{}]},{},[1]);

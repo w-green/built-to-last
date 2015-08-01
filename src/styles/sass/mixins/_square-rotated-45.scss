@@ -1,0 +1,10 @@
+@mixin square-rotated-45($width: 100px) {
+  width: $width;
+  height: $width;
+  text-align: center;
+  line-height: $width;
+  text-transform: uppercase;
+  color: #FFF;
+  transform: rotate(45deg);
+  margin-top: -53px;
+}
