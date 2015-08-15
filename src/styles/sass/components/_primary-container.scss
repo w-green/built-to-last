@@ -1,0 +1,34 @@
+.primary-container {
+  margin-bottom: 100px;
+  @include container(100%);
+
+  @include bp-min($screen-sm-min) {
+    // @include container;
+  }
+
+  @include bp-min($screen-md-min) {
+    // @include container(100%);
+    // padding-left:200px;
+  }
+
+  @include bp-min($screen-lg-min) {
+    // @include container(100%);
+    // @include show-grid(12);
+  }
+
+}
+
+
+.arrow__down {
+    width: 0;
+    height: 0;
+    margin-left: calc(50% - 50px);
+    margin-top: 35px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    background-color: transparent;
+    border-top: 45px solid $teal;
+    transform: rotate(0);
+}
+
+@import 'squares';

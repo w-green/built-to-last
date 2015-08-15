@@ -1,0 +1,11 @@
+@include bp-min($screen-sm-min) {
+
+  .headline__container {
+    margin-top: -100px;
+  }
+
+  .headline--centered {
+    font-size: 4.6em;
+  }
+
+}

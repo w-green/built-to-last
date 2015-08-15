@@ -4,7 +4,7 @@
 
 // ----- resets ----- //
 @import 'normalize';
-
+@import 'meyer-reset';
 
 // ----- Font awesome version 4.2.0----- //
 @import 'lib/font-awesome/scss/font-awesome.scss';
@@ -23,15 +23,23 @@
 @import 'mixins/square-rotated-45';
 @import 'mixins/circle';
 
+
 // ----- modules ----- //
 @import 'modules/grid/grid';
+
 
 // ----- components ----- //
 @import 'components/typography';
 @import 'components/theme';
 @import 'components/layout';
-@import 'components/menu';
+
+// ----- primary-container ----- //
+@import 'components/primary-container';
+@import 'components/headline/headline';
+
+@import 'components/menu/menu';
 @import 'components/slider';
 @import 'components/dividers/divider';
+@import 'components/projects-list';
 
 

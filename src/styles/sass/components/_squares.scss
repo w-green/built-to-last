@@ -1,0 +1,34 @@
+.square__rotated {
+  display: none;
+  margin-left: -50px;
+  position: absolute;
+
+  @include square-rotated-45;
+
+  div {
+    transform: rotate(-45deg);
+  }
+
+}
+
+.square__rotated--first {
+  bottom: 172px;
+  background-color: $skyblue;
+}
+
+.square__rotated--second {
+  bottom: 22px;
+  background-color: $teal;
+}
+
+.square__rotated--third {
+  bottom: 97px;
+  left: 75px;
+  background-color: $burlywood;
+}
+
+@include bp-min($screen-md-min) {
+  .square__rotated {
+    display: block;
+  }
+}

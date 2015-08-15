@@ -31,17 +31,6 @@ $divider-three--base-color: black;
   border-top: 5px solid $grey-green;
 }
 
-.divider__circle {
-  margin-left: -50px;
-
-  @include square-rotated-45;
-
-  div {
-    transform: rotate(-45deg);
-  }
-
-}
-
 .divider__side-pattern:before, .divider__side-pattern:after {
   content: "";
   width: 200px;
@@ -49,41 +38,10 @@ $divider-three--base-color: black;
   border: 1px solid rgba(0, 0, 0, 0.0980392);
 }
 
-.divider-two__circle--a {
-    margin-left: calc(50% - 50px);
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    background-color: transparent;
-    border-top: 45px solid teal;
-    transform: rotate(0);
-}
-
-
-.divider-two__circle--b {
-  background-color: skyblue;
-}
-
-.divider-three__circle--a {
-  background-color: teal;
-}
-
-.divider-three__circle--b {
-  position: absolute;
-  left: 71px;
-  margin-top: -127px;
-  background-color: burlywood;
-}
-
-.divider-four__circle {
-  background-color: $grey-green;
-}
-
 .divider-inner-container{
 
-  @include span(10 of 12);
-  @include push(1);
+  @include span(12 of 12);
+  // @include push(1);
 
   padding: 15px;
   margin-top: 80px;
@@ -91,54 +49,10 @@ $divider-three--base-color: black;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
-  @include bp-min($screen-md-min) {
-    @include span(8 of 12);
-    @include push(2);
-  }
-
-}
-
-
-.box {
-  @include span(6 of 12);
-  position: absolute;
-  top: 50%;
-  margin-top: -50px;
-  width: 100%;
-  height: 100px;
-  color: teal;
-  text-align: center;
-}
-
-h1 {
-  text-shadow: 2px 4px burlywood;
-}
-
-.companyName--centered {
-  font-size: 4.6em;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 10px;
-  margin: 0;
-}
-
-.primary-container {
-  margin-bottom: 100px;
-  @include container(100%);
-
-  @include bp-min($screen-sm-min) {
-    // @include container;
-  }
-
-  @include bp-min($screen-md-min) {
-    // @include container(100%);
-    // padding-left:200px;
-  }
-
-  @include bp-min($screen-lg-min) {
-    // @include container(100%);
-    // @include show-grid(12);
-  }
+  // @include bp-min($screen-md-min) {
+  //   @include span(8 of 12);
+  //   @include push(2);
+  // }
 
 }
 
@@ -169,9 +83,4 @@ footer {
   float: left;
   padding-right: 1em;
   padding-bottom: 1em;
-}
-
-
-.contact-details {
-  text-align: center;
 }

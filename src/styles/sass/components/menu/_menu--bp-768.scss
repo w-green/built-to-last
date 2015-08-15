@@ -1,0 +1,16 @@
+@include bp-min($screen-sm-min) {
+
+  .main-nav {
+    height: 40px;
+  }
+
+  .contact-details {
+    text-align: right;
+
+    li {
+      display: inline;
+    }
+
+  }
+
+}

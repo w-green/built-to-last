@@ -1,0 +1,29 @@
+.main-nav {
+  background-color: $brown-dark;
+  color: $dark-gold;
+  text-align: right;
+  padding: 10px 20px;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      line-height: 2em;
+    }
+  }
+}
+
+.contact-details {
+  text-align: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  li {
+    display: block;
+  }
+
+}
+
+@import 'menu--bp-768';

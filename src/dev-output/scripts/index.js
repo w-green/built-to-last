@@ -11,10 +11,9 @@ $(function(){
 
 
   $('.carousel-slider').slick({
-    // slidesToShow : 1
-    // variableWidth : true,
     dots : true,
-    speed: 300
+    fade : true,
+    cssEase : 'linear'
   });
 
 

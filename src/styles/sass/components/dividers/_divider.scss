@@ -8,6 +8,7 @@
   &:first-of-type {
     margin-top: 0;
     margin-bottom: 0;
+    background-color: $brown-dark;
 
     @include bp-min($screen-sm-min) {
       max-height: 400px !important;
