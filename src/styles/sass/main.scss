@@ -18,6 +18,10 @@
 @import 'animations/fadeinup';
 @import 'animations/grow';
 
+// ----- effects ----- //
+@import 'mixins/effects/grow';
+
+
 // ----- mixins ----- //
 @import 'mixins/clearfix';
 @import 'mixins/square-rotated-45';
@@ -40,6 +44,6 @@
 @import 'components/menu/menu';
 @import 'components/slider';
 @import 'components/dividers/divider';
-@import 'components/projects-list';
+@import 'components/projects-list/projects-list';
 
 

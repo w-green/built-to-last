@@ -13,18 +13,21 @@
 
 .square__rotated--first {
   bottom: 172px;
-  background-color: $skyblue;
+  // background-color: white;
+  background-color: rgba(255,255,255, 0.8);
 }
 
 .square__rotated--second {
   bottom: 22px;
-  background-color: $teal;
+  // background-color: $teal;
+  background-color: rgba(0,128,128, 0.6);
 }
 
 .square__rotated--third {
   bottom: 97px;
   left: 75px;
-  background-color: $burlywood;
+  // background-color: $burlywood;
+  background-color: rgba(193,124,68, 0.6);
 }
 
 @include bp-min($screen-md-min) {

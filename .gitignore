@@ -3,6 +3,7 @@ node_modules
 src/images
 src/dev-output/images
 src/data
+notes.txt
 .sass-cache
 dist
 .tmp

@@ -1,3 +1,11 @@
 .divider-one {
   @extend .divider;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: $blue-dark url('/images/backgrounds/background-dot.png') center center;
+  border-bottom: 5px solid $gold;
+
+  @include bp-min($screen-sm-min) {
+    max-height: 400px !important;
+  }
 }
