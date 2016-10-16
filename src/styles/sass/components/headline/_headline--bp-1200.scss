@@ -1,0 +1,7 @@
+@include bp-min($screen-lg-min) {
+
+  .headline--centered {
+    @include font-size(7.4);
+  }
+
+}

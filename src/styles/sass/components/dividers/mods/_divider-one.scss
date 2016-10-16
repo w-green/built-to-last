@@ -5,7 +5,7 @@
   background: $blue-dark url('/images/backgrounds/background-dot.png') center center;
   border-bottom: 5px solid $gold;
 
-  @include bp-min($screen-sm-min) {
+  @include bp-min($screen-lg-min) {
     max-height: 400px !important;
   }
 }
