@@ -12,7 +12,7 @@
   }
 
   @include bp-min($screen-lg-min) {
-    // @include container(100%);
+    @include container(1336px);
     // @include show-grid(12);
   }
 
